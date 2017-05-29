@@ -44,7 +44,7 @@ project Runtime_Build is
 
   package Compiler is
      --  COMFLAGS here is common flags (used for C and Ada).
-     COMFLAGS := Target_Options.CFLAGS & ("-fcallgraph-info=su,da",
+     COMFLAGS := Target_Options.CFLAGS & ("",
         "-ffunction-sections",
         "-fdata-sections");
 
