@@ -46,7 +46,7 @@ procedure Setup_Pll is
    -- Clock Tree Configuration --
    ------------------------------
 
-   HSE_Enabled     : constant Boolean := True;  -- use high-speed ext. clock
+   HSE_Enabled     : constant Boolean := True; -- use high-speed ext. clock
    HSE_Bypass      : constant Boolean := False; -- don't bypass ext. resonator
    LSI_Enabled     : constant Boolean := True;  -- use low-speed internal clock
 
@@ -142,7 +142,8 @@ procedure Setup_Pll is
 
       --  Check configuration
       pragma Compile_Time_Error
-        (PLLVC0 not in PLLVC0_Range or else PLLCLKOUT not in PLLOUT_Range,
+        (Activate_PLL and
+           (PLLVC0 not in PLLVC0_Range or else PLLCLKOUT not in PLLOUT_Range),
            "Invalid clock configuration");
 
       pragma Compile_Time_Error

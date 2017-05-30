@@ -38,8 +38,7 @@ package System.BB.Board_Parameters is
    --------------------
 
    Main_Clock_Frequency : constant := 100_000_000;
-   --  Maximal frequency in over-drive mode. In non over-drive mode, the
-   --  frequency should be adjusted to 168 MHz.
+   --  SYSCLK frequency, maximum 100MHz
 
    HSE_Clock_Frequency : constant := 8_000_000;
    --  Frequency of High Speed External clock.
